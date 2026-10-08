@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#191918" />
+    <title>Contact Us | GALVANISED SHAMBA WIRE PRODUCTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="reviews.css" />
+    <style>
+         :root {
+            --ink: #20201f;
+            --muted: #777773;
+            --paper: #f7f6f3;
+            --red: #d92b31;
+            --line: #e8e6e1;
+            --display: "Space Grotesk", sans-serif;
+            --body: "Inter", sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: white;
+            font: 15px/1.6 var(--body);
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+        
+        .topbar {
+            color: white;
+            background: #191918;
+        }
+        
+        .topbar-inner {
+            width: min(1160px, calc(100% - 48px));
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 26px;
+            margin: auto;
+        }
+        
+        .brand {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            gap: 11px;
+            font: 700 14px var(--display);
+        }
+        
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            color: white;
+            background: var(--red);
+            font-size: 20px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+        
+        nav a,
+        .phone {
+            color: #ffffffbd;
+            font-size: 11px;
+        }
+        
+        nav a:hover,
+        .phone:hover {
+            color: white;
+        }
+        
+        main {
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+        
+        .page-intro {
+            max-width: 720px;
+            padding: 70px 0 34px;
+        }
+        
+        .eyebrow {
+            color: var(--red);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-family: var(--display);
+        }
+        
+        h1 {
+            margin: 6px 0 10px;
+            font-size: 43px;
+            line-height: 1.15;
+        }
+        
+        .page-intro p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        
+        .contact-layout {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 50px;
+            align-items: start;
+            padding-bottom: 72px;
+        }
+        
+        .details h2,
+        .contact-form h2 {
+            margin: 0 0 15px;
+            font-size: 20px;
+        }
+        
+        .detail-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 24px;
+            margin: 0 0 26px;
+        }
+        
+        .detail-list div {
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line);
+        }
+        
+        .detail-list dt {
+            color: var(--muted);
+            font-size: 10px;
+        }
+        
+        .detail-list dd {
+            margin: 2px 0 0;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .detail-list a:hover {
+            color: var(--red);
+        }
+        
+        .map-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .map-heading h2 {
+            margin: 0;
+            font: 600 15px var(--display);
+        }
+        
+        .directions {
+            color: var(--red);
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        .map-frame {
+            height: 300px;
+            overflow: hidden;
+            background: #e8e6e1;
+        }
+        
+        .map-frame iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .map-caption {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 10px;
+        }
+        
+        .contact-form {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+        }
+        
+        .contact-form p {
+            margin: -7px 0 18px;
+            color: var(--muted);
+            font-size: 11px;
+        }
+        
+        .field-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+        }
+        
+        .field {
+            margin-bottom: 13px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        input,
+        textarea {
+            width: 100%;
+            min-height: 41px;
+            padding: 9px 10px;
+            border: 1px solid #dfddd7;
+            border-radius: 5px;
+            outline: 0;
+            background: white;
+            font-size: 11px;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px #d92b3118;
+        }
+        
+        textarea {
+            min-height: 105px;
+            resize: vertical;
+        }
+        
+        .submit {
+            width: 100%;
+            min-height: 44px;
+            border: 0;
+            border-radius: 5px;
+            color: white;
+            background: #188650;
+            font-size: 11px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        
+        .submit:hover {
+            background: #116b3f;
+        }
+        
+        footer {
+            padding: 22px 24px;
+            color: #ffffff80;
+            background: #191918;
+            font-size: 10px;
+        }
+        
+        .footer-inner {
+            width: min(1160px, 100%);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: auto;
+        }
+        
+        @media (max-width: 800px) {
+            .topbar-inner {
+                width: calc(100% - 32px);
+                min-height: 66px;
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 10px 0;
+            }
+            .brand {
+                font-size: 11px;
+            }
+            .brand-mark {
+                width: 36px;
+                height: 36px;
+            }
+            nav {
+                order: 3;
+                width: 100%;
+                justify-content: space-between;
+                gap: 9px;
+            }
+            nav a {
+                font-size: 10px;
+            }
+            .phone {
+                font-size: 10px;
+            }
+            main {
+                width: calc(100% - 36px);
+            }
+            .page-intro {
+                padding: 48px 0 26px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding-bottom: 48px;
+            }
+            .details {
+                order: 2;
+            }
+            .contact-form {
+                order: 1;
+            }
+            .map-frame {
+                height: 260px;
+            }
+            .footer-inner {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+        
+        @media (max-width: 420px) {
+            .field-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            nav {
+                gap: 5px;
+            }
+            nav a {
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html#home" aria-label="Galvanised Shamba Wire Products home"><span class="brand-mark">S</span><span>GALVANISED SHAMBA WIRE PRODUCTS</span></a>
+            <nav aria-label="Main navigation">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#tanks">Water Tanks</a>
+                <a href="about.html">About</a>
+                <a href="index.html#why">Why Us</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+            <a class="phone" href="tel:0762695345">0762 695 345</a>
+        </div>
+    </header>
+    <main>
+        <section class="page-intro">
+            <div class="eyebrow">Get in touch</div>
+            <h1>Let's build something solid together.</h1>
+            <p>Talk to our team for quotes, bulk orders, or technical advice. We are based in Nairobi and serve customers across Kenya.</p>
+        </section>
+        <div class="contact-layout">
+            <section class="details" aria-labelledby="contact-details-heading">
+                <h2 id="contact-details-heading">Find us</h2>
+                <dl class="detail-list">
+                    <div><dt>Call us</dt>
+                        <dd><a href="tel:0762695345">0762 695 345</a></dd>
+                    </div>
+                    <div><dt>WhatsApp</dt>
+                        <dd><a href="https://wa.me/254762695345">0762 695 345</a></dd>
+                    </div>
+                    <div><dt>Location</dt>
+                        <dd>Nairobi, Kenya</dd>
+                    </div>
+                    <div><dt>Hours</dt>
+                        <dd>Mon–Sat · 7:00 AM–7:00 PM</dd>
+                    </div>
+                    <div><dt>Email</dt>
+                        <dd><a href="mailto:galvanizedchainlink@gmail.com">galvanizedchainlink@gmail.com</a></dd>
+                    </div>
+                </dl>
+                <div class="map-heading">
+                    <h2>Our location</h2>
+                    <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=Nairobi%2C%20Kenya" target="_blank" rel="noopener noreferrer">Open directions</a>
+                </div>
+                <div class="map-frame">
+                    <iframe title="Map showing Nairobi, Kenya" src="https://www.google.com/maps?q=Nairobi%2C%20Kenya&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+                <p class="map-caption">Nairobi, Kenya · Nationwide delivery</p>
+            </section>
+            <form class="contact-form" id="contact-form">
+                <h2>Send us a message</h2>
+                <p>Your message will be prepared in WhatsApp for our team.</p>
+                <div class="field-grid">
+                    <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required /></div>
+                    <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
+                </div>
+                <div class="field"><label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+                <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell us what you need..."></textarea></div>
+                <button class="submit" type="submit">Send via WhatsApp</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner"><span>&copy; 2026 GALVANISED SHAMBA WIRE PRODUCTS</span><span>Nairobi, Kenya &middot; Nationwide delivery</span><a href="about.html">About us</a></div>
+    </footer>
+    <script>
+        document.querySelector("#contact-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const fields = new FormData(event.currentTarget);
+            const message = [
+                `Hello GALVANISED SHAMBA WIRE PRODUCTS, my name is ${fields.get("name")}.`,
+                `Phone: ${fields.get("phone")}.`,
+                fields.get("email") ? `Email: ${fields.get("email")}.` : "",
+                `Message: ${fields.get("message")}`
+            ].filter(Boolean).join("\n");
+            window.location.href = `https://wa.me/254762695345?text=${encodeURIComponent(message)}`;
+        });
+    </script>
+    <script src="reviews.js" defer></script>
+</body>
+
+</html>
